@@ -1,0 +1,36 @@
+{
+  "name": "vanilla-vite-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "preview": "vite preview",
+    "dev": "vite",
+    "build": "vite build && npm run postcss && npm run generate-map && node scripts/replace-classes.js",
+    "postcss": "postcss dist/styles/*.css -d dist/styles",
+    "generate-map": "node scripts/generate-class-map.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "@spiriit/vite-plugin-svg-spritemap": "^4.0.1",
+    "gh-pages": "^6.3.0",
+    "glob": "^8.1.0",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-hash-classname": "^0.4.0",
+    "sass": "^1.87.0",
+    "sharp": "^0.33.4",
+    "svgo": "^3.3.2",
+    "vite": "^6.3.2",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-image-optimizer": "^1.1.8"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "swiper": "^11.2.6",
+    "vite-plugin-full-reload": "^1.2.0",
+    "vite-plugin-html-inject": "^1.1.2"
+  }
+}

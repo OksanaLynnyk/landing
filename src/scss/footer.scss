@@ -1,0 +1,158 @@
+@use './common/mixins' as *;
+@use './common/breakpoints' as bp;
+
+.footer {
+  background-color: #371e6f;
+  background-repeat: no-repeat;
+
+  @include media(to-desktop) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url('/img/footer/footer-line-mb.png');
+    background-size: 412px 55px;
+    background-position: center bottom 27px;
+  }
+
+  @include media(desktop) {
+    background-image: url('/img/footer/footer-line-desk.png');
+    background-size: 658px 180px;
+    background-position: right -128px top -30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.footer-container {
+  display: flex;
+
+  @include media(to-desktop) {
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include media(desktop) {
+    padding-right: 147px;
+    justify-content: space-between;
+    align-items: end;
+  }
+}
+
+.footer-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include media(to-desktop) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  @include media(desktop) {
+    flex-direction: column;
+  }
+
+  a {
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: #ff4ea0;
+    }
+  }
+}
+
+.footer-link-logo {
+  @include media(to-desktop) {
+    display: none;
+  }
+
+  @include media(desktop) {
+    width: 203px;
+    height: 31px;
+  }
+}
+
+.footer-text {
+  font-weight: 400;
+
+  @include media(to-desktop) {
+    font-size: 12px;
+  }
+
+  @include media(desktop) {
+    font-size: 16px;
+  }
+}
+
+.footer-text-accent {
+  color: #fbb679;
+}
+
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @include media(to-desktop) {
+    gap: 16px;
+  }
+
+  @include media(desktop) {
+    gap: 24px;
+  }
+}
+
+.footer-list {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social-list-wrapper {
+  @include media(desktop) {
+    display: flex;
+    gap: 24px;
+    align-items: end;
+  }
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.footer-social-img {
+  @include media(to-desktop) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include media(desktop) {
+    width: 33px;
+    height: 32px;
+  }
+}
+
+.footer-social-link {
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+}
+
+.footer-link {
+  transition: all 0.3s ease;
+  padding: 6px;
+
+  &:hover,
+  &:focus {
+    color: #ff4ea0;
+  }
+}

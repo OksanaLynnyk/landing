@@ -1,0 +1,99 @@
+@use './common/mixins' as *;
+@use './common/breakpoints' as bp;
+
+.for {
+  .section-subtitle {
+    text-align: start;
+
+    @include media(to-desktop) {
+      margin-bottom: 16px;
+    }
+
+    @include media(desktop) {
+      margin-bottom: 32px;
+    }
+  }
+
+  @include media(to-desktop) {
+    overflow: hidden;
+  }
+
+  @include media(desktop) {
+    h2 {
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.for-wrapper {
+  display: flex;
+
+  @include media(to-desktop) {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  @include media(desktop) {
+    gap: 20px;
+  }
+}
+
+.for-list {
+  display: flex;
+  flex-direction: column;
+
+  @include media(to-desktop) {
+    gap: 16px;
+  }
+
+  @include media(desktop) {
+    gap: 24px;
+  }
+}
+
+.for-item {
+  display: flex;
+  align-items: center;
+
+  @include media(to-desktop) {
+    gap: 16px;
+  }
+
+  @include media(desktop) {
+    gap: 20px;
+  }
+}
+
+.for-svg {
+  flex-shrink: 0;
+
+  @include media(to-desktop) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include media(desktop) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.for-accent {
+  font-weight: 700;
+  color: #fbb679;
+}
+
+.for-img {
+  @include media(to-desktop) {
+    position: relative;
+    width: 375px;
+    height: 212px;
+    left: -20px;
+  }
+
+  @include media(desktop) {
+    width: 538px;
+    height: 303px;
+    align-self: flex-end;
+  }
+}

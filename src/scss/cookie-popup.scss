@@ -1,0 +1,148 @@
+@use './common/mixins' as *;
+@use './common/breakpoints' as bp;
+
+.cookie-popup {
+  background-color: #2b146b;
+  display: none;
+  position: fixed;
+  border-radius: 20px 20px 0 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  width: 100%;
+
+  @include media(to-desktop) {
+    padding-top: 32px;
+    padding-bottom: 97px;
+    width: 373px;
+  }
+
+  @include media(desktop) {
+    width: 1442px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+.popup-container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+
+  @include media(to-desktop) {
+    flex-direction: column;
+    padding-right: 19px;
+    padding-left: 19px;
+    width: 373px;
+    gap: 32px;
+  }
+
+  @include media(desktop) {
+    padding-left: 59px;
+    padding-right: 31px;
+    width: 1442px;
+    justify-content: space-between;
+  }
+}
+
+.show-popup {
+  @include media(to-desktop) {
+    display: block;
+  }
+
+  @include media(desktop) {
+    display: flex;
+  }
+}
+
+.cookies-btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+
+  @include media(to-desktop) {
+    gap: 32px;
+  }
+
+  @include media(desktop) {
+    gap: 40px;
+  }
+}
+
+.cookie-btn {
+  font-family: 'Manrope', sans-serif;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  border-radius: 30px;
+  color: #f8f8f8;
+  border: none;
+
+  @include media(to-desktop) {
+    width: 262px;
+    height: 54px;
+    font-size: 16px;
+  }
+
+  @include media(desktop) {
+    font-size: 24px;
+    width: 295px;
+    height: 65px;
+  }
+
+  &.accept-btn {
+    background-color: #9470d0;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      border: 2px solid #9470d0;
+    }
+  }
+
+  &.decline-btn {
+    background: #567ac7;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      border: 2px solid #567ac7;
+    }
+  }
+}
+
+.cookies-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+
+  @include media(to-desktop) {
+    font-size: 16px;
+  }
+
+  @include media(desktop) {
+    font-size: 24px;
+  }
+}
+
+.cookies-title {
+  font-family: 'Manrope', sans-serif;
+  color: #be9df6;
+  font-weight: 800;
+
+  @include media(to-desktop) {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+
+  @include media(desktop) {
+    font-size: 64px;
+    margin-bottom: 40px;
+  }
+}

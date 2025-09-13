@@ -1,0 +1,48 @@
+@use './common/mixins' as *;
+@use './common/breakpoints' as bp;
+
+.hero-section {
+  background-repeat: no-repeat;
+
+  @include media(to-desktop) {
+    background-image: url('/img/hero/hero-bg-mb.png');
+    padding-top: 68px;
+    padding-bottom: 74px;
+    background-position: center 76px;
+    background-size: contain;
+  }
+
+  @include media(desktop) {
+    background-image: url('/img/hero/hero-bg.png');
+    padding-top: 183px;
+    padding-bottom: 241px;
+    background-position: center 24px;
+    background-size: cover;
+  }
+}
+
+.hero-container {
+  @include media(to-desktop) {
+    padding-right: 110px;
+  }
+
+  @include media(desktop) {
+    padding-right: 507px;
+  }
+}
+
+.hero-text {
+  color: #fbb679;
+  font-family: 'Play', sans-serif;
+  font-weight: 400;
+
+  @include media(to-desktop) {
+    font-size: 16px;
+    width: 159px;
+  }
+
+  @include media(desktop) {
+    font-size: 40px;
+    width: 650px;
+  }
+}

@@ -1,0 +1,115 @@
+@use './common/mixins' as *;
+@use './common/breakpoints' as bp;
+
+.toolkit {
+  .section-subtitle {
+    @include media(to-desktop) {
+      text-align: start;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.toolkit-wrapper {
+  display: flex;
+
+  @include media(to-desktop) {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  @include media(desktop) {
+    flex-direction: row-reverse;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+.toolkit-text-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include media(to-desktop) {
+    gap: 24px;
+  }
+  @include media(desktop) {
+    gap: 32px;
+  }
+}
+
+.toolkit-text {
+  @include media(to-desktop) {
+    width: 254px;
+  }
+}
+
+.toolkit-list {
+  display: flex;
+  flex-direction: column;
+
+  @include media(to-desktop) {
+    gap: 16px;
+  }
+
+  @include media(desktop) {
+    gap: 24px;
+  }
+}
+
+.toolkit-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.toolkit-svg {
+  @include media(to-desktop) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include media(desktop) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.toolkit-link {
+  color: #371e6f;
+  font-weight: 400;
+  background-color: #be9df6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 16px 32px;
+  width: fit-content;
+  transition: all 0.3s ease;
+
+  @include media(to-desktop) {
+    font-size: 16px;
+  }
+
+  @include media(desktop) {
+    font-size: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    border: 2px solid #9470d0;
+    color: #f8f8f8;
+  }
+}
+
+.toolkit-img {
+  @include media(to-desktop) {
+    width: 335px;
+    height: 210px;
+  }
+
+  @include media(desktop) {
+    width: 650px;
+    height: 408px;
+  }
+}

@@ -1,0 +1,104 @@
+@use './common/mixins' as *;
+@use './common/breakpoints' as bp;
+
+.stream {
+  .section-subtitle {
+    text-align: start;
+    line-height: normal;
+
+    @include media(to-desktop) {
+      margin-bottom: 16px;
+    }
+
+    @include media(desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media(desktop) {
+    h2 {
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.stream-wrapper {
+  display: flex;
+
+  @include media(to-desktop) {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  @include media(desktop) {
+    flex-direction: row-reverse;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+.stream-text-wrapper {
+  @include media(desktop) {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+.stream-list-title {
+  font-weight: 700;
+  color: #be9df6;
+
+  @include media(to-desktop) {
+    font-size: 14px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  @include media(desktop) {
+    font-size: 24px;
+  }
+}
+
+.stream-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stream-item {
+  display: flex;
+  align-items: center;
+
+  @include media(to-desktop) {
+    gap: 16px;
+  }
+
+  @include media(desktop) {
+    gap: 20px;
+  }
+}
+
+.stream-svg {
+  @include media(to-desktop) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include media(desktop) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.stream-img {
+  @include media(to-desktop) {
+    width: 335px;
+    height: 278px;
+  }
+
+  @include media(desktop) {
+    width: 650px;
+    height: 550px;
+  }
+}

@@ -1,0 +1,99 @@
+@use './common/mixins' as *;
+@use './common/breakpoints' as bp;
+
+.what-we-do {
+  @include media(to-desktop) {
+    padding-top: 48px;
+  }
+
+  @include media(desktop) {
+    padding-top: 96px;
+  }
+
+  .section-subtitle {
+    @include media(desktop) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.what-we-do-wrapper {
+  display: flex;
+
+  @include media(to-desktop) {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  @include media(desktop) {
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+.what-we-do-list-title {
+  font-weight: 700;
+  color: #be9df6;
+
+  @include media(to-desktop) {
+    font-size: 14px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  @include media(desktop) {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    font-size: 24px;
+  }
+}
+
+.what-we-do-list {
+  display: flex;
+  flex-direction: column;
+
+  @include media(to-desktop) {
+    gap: 16px;
+  }
+
+  @include media(desktop) {
+    gap: 24px;
+  }
+}
+
+.what-we-do-item {
+  display: flex;
+  align-items: center;
+
+  @include media(to-desktop) {
+    gap: 16px;
+  }
+
+  @include media(desktop) {
+    gap: 20px;
+  }
+}
+
+.what-we-do-svg {
+  @include media(to-desktop) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include media(desktop) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.what-we-do-img {
+  @include media(to-desktop) {
+    width: 335px;
+    height: 273px;
+  }
+
+  @include media(desktop) {
+    width: 650px;
+    height: 528px;
+  }
+}
